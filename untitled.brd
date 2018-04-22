@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.0">
+<eagle version="8.6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.001" altunitdist="inch" altunit="inch"/>
+<grid distance="0.001" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
 <layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
@@ -22,7 +22,7 @@
 <layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="yes"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -159,9 +159,9 @@
 <board>
 <plain>
 <wire x1="0" y1="0" x2="43.16" y2="0" width="0" layer="20"/>
-<wire x1="43.16" y1="0" x2="43.16" y2="14.402" width="0" layer="20"/>
-<wire x1="43.16" y1="14.402" x2="0" y2="14.402" width="0" layer="20"/>
-<wire x1="0" y1="14.402" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="43.16" y1="0" x2="43.1346" y2="15.1132" width="0" layer="20"/>
+<wire x1="43.1346" y1="15.1132" x2="-0.0254" y2="15.1132" width="0" layer="20"/>
+<wire x1="-0.0254" y1="15.1132" x2="0" y2="0" width="0" layer="20"/>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
@@ -2690,6 +2690,20 @@ TEST_POINT
 <rectangle x1="0.3175" y1="-0.9525" x2="0.9525" y2="-0.3175" layer="31"/>
 <rectangle x1="-0.9525" y1="-0.9525" x2="-0.3175" y2="-0.3175" layer="31"/>
 </package>
+<package name="RADIOMETRIX-HX1">
+<wire x1="-21.59" y1="-7.62" x2="21.59" y2="-7.62" width="0.127" layer="21"/>
+<wire x1="-21.59" y1="-7.62" x2="-21.59" y2="7.62" width="0.127" layer="21"/>
+<wire x1="21.59" y1="7.62" x2="-21.59" y2="7.62" width="0.127" layer="21"/>
+<wire x1="21.59" y1="7.62" x2="21.59" y2="-7.62" width="0.127" layer="21"/>
+<pad name="RFOUT" x="-13.97" y="-10.16" drill="0.7" diameter="2.1844"/>
+<pad name="RFGND" x="-11.43" y="-10.16" drill="0.7" diameter="2.1844"/>
+<pad name="TXD" x="11.43" y="-10.16" drill="0.7" diameter="2.1844"/>
+<pad name="EN" x="3.81" y="-10.16" drill="0.7" diameter="2.1844"/>
+<pad name="VCC" x="6.35" y="-10.16" drill="0.7" diameter="2.1844"/>
+<pad name="0V" x="8.89" y="-10.16" drill="0.7" diameter="2.1844"/>
+<pad name="RFGND2" x="-16.51" y="-10.16" drill="0.7" diameter="2.1844"/>
+<rectangle x1="7.62" y1="-2.54" x2="19.05" y2="5.08" layer="39"/>
+</package>
 </packages>
 </library>
 <library name="atmel_tiny24-44-84tiny48-88mega48-88-168-328">
@@ -4231,23 +4245,23 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <element name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value="22pF" x="13.97" y="12.192" rot="R270">
 <attribute name="SPICEPREFIX" value="C" x="13.97" y="12.192" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value="4.7pF" x="5.842" y="11.938">
-<attribute name="SPICEPREFIX" value="C" x="5.842" y="11.938" size="1.778" layer="27" display="off"/>
+<element name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value="4.7pF" x="7.1628" y="12.6238">
+<attribute name="SPICEPREFIX" value="C" x="7.1628" y="12.6238" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value="22pF" x="5.334" y="9.271">
-<attribute name="SPICEPREFIX" value="C" x="5.334" y="9.271" size="1.778" layer="27" display="off"/>
+<element name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value="22pF" x="7.0104" y="9.7282">
+<attribute name="SPICEPREFIX" value="C" x="7.0104" y="9.7282" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value="18pF" x="8.001" y="11.176" rot="R90">
-<attribute name="SPICEPREFIX" value="C" x="8.001" y="11.176" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value="18pF" x="9.6266" y="11.6078" rot="R90">
+<attribute name="SPICEPREFIX" value="C" x="9.6266" y="11.6078" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value="1.8pF" x="3.556" y="6.858" rot="R90">
-<attribute name="SPICEPREFIX" value="C" x="3.556" y="6.858" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value="1.8pF" x="5.0038" y="7.5692" rot="R90">
+<attribute name="SPICEPREFIX" value="C" x="5.0038" y="7.5692" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value="22pF" x="4.191" y="4.953">
-<attribute name="SPICEPREFIX" value="C" x="4.191" y="4.953" size="1.778" layer="27" display="off"/>
+<element name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value="22pF" x="7.0104" y="5.2832">
+<attribute name="SPICEPREFIX" value="C" x="7.0104" y="5.2832" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value="470pF" x="4.064" y="3.81" rot="R180">
-<attribute name="SPICEPREFIX" value="C" x="4.064" y="3.81" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value="470pF" x="7.0104" y="4.1656" rot="R180">
+<attribute name="SPICEPREFIX" value="C" x="7.0104" y="4.1656" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="L1" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" package="0603" package3d_urn="urn:adsk.eagle:package:37574/1" value="150nH" x="12.7" y="10.16" rot="R90">
 <attribute name="PROD_ID" value="NDUC-07874" x="12.7" y="10.16" size="1.778" layer="27" rot="R90" display="off"/>
@@ -4255,16 +4269,16 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <element name="L2" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" package="0603" package3d_urn="urn:adsk.eagle:package:37574/1" value="220nH" x="15.494" y="11.176" rot="R90">
 <attribute name="PROD_ID" value="NDUC-07874" x="15.494" y="11.176" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="L3" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" package="0603" package3d_urn="urn:adsk.eagle:package:37574/1" value="56nH" x="10.287" y="10.541">
-<attribute name="PROD_ID" value="NDUC-07874" x="10.287" y="10.541" size="1.778" layer="27" display="off"/>
+<element name="L3" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" package="0603" package3d_urn="urn:adsk.eagle:package:37574/1" value="56nH" x="11.2014" y="10.16" rot="R270">
+<attribute name="PROD_ID" value="NDUC-07874" x="11.2014" y="10.16" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="L4" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" package="0603" package3d_urn="urn:adsk.eagle:package:37574/1" value="68nH" x="5.715" y="10.541">
-<attribute name="PROD_ID" value="NDUC-07874" x="5.715" y="10.541" size="1.778" layer="27" display="off"/>
+<element name="L4" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" package="0603" package3d_urn="urn:adsk.eagle:package:37574/1" value="68nH" x="7.2644" y="10.9982">
+<attribute name="PROD_ID" value="NDUC-07874" x="7.2644" y="10.9982" size="1.778" layer="27" display="off"/>
 </element>
-<element name="L5" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" package="0603" package3d_urn="urn:adsk.eagle:package:37574/1" value="68nH" x="4.826" y="7.112" rot="R90">
-<attribute name="PROD_ID" value="NDUC-07874" x="4.826" y="7.112" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="L5" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" package="0603" package3d_urn="urn:adsk.eagle:package:37574/1" value="68nH" x="6.4008" y="7.5438" rot="R90">
+<attribute name="PROD_ID" value="NDUC-07874" x="6.4008" y="7.5438" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0402" package3d_urn="urn:adsk.eagle:package:26058/1" value="100k" x="17.526" y="12.573" rot="R270"/>
+<element name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0402" package3d_urn="urn:adsk.eagle:package:26058/1" value="100k" x="17.526" y="12.319" rot="R270"/>
 <element name="L6" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" package="0603" package3d_urn="urn:adsk.eagle:package:37574/1" value="170nH" x="17.526" y="8.128" rot="R90">
 <attribute name="PROD_ID" value="NDUC-07874" x="17.526" y="8.128" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
@@ -4295,12 +4309,12 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <element name="C16" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402K" package3d_urn="urn:adsk.eagle:package:23679/2" value=".1uF" x="19.304" y="3.81" rot="R270">
 <attribute name="SPICEPREFIX" value="C" x="19.304" y="3.81" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X04_SMD_RA_FEMALE" package3d_urn="urn:adsk.eagle:package:38100/1" value="" x="36.83" y="-5.715" smashed="yes">
-<attribute name="PROD_ID" value="CONN-12382" x="36.83" y="-5.715" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="35.306" y="-6.985" size="0.6096" layer="27" font="vector" ratio="20"/>
+<element name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X04_SMD_RA_FEMALE" package3d_urn="urn:adsk.eagle:package:38100/1" value="" x="29.1846" y="-5.7404" smashed="yes">
+<attribute name="PROD_ID" value="CONN-12382" x="29.1846" y="-5.7404" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="27.6606" y="-7.0104" size="0.6096" layer="27" font="vector" ratio="20"/>
 </element>
-<element name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X03_SMD_RA_FEMALE" package3d_urn="urn:adsk.eagle:package:38081/1" value="1x3 RA Female .1&quot;" x="4.572" y="-5.715" smashed="yes">
-<attribute name="PROD_ID" value="CONN-10926" x="4.572" y="-5.715" size="1.778" layer="27" display="off"/>
+<element name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X03_SMD_RA_FEMALE" package3d_urn="urn:adsk.eagle:package:38081/1" value="1x3 RA Female .1&quot;" x="7.62" y="-5.715" smashed="yes">
+<attribute name="PROD_ID" value="CONN-10926" x="7.62" y="-5.715" size="1.778" layer="27" display="off"/>
 </element>
 <element name="U$2" library="Ava" package="QFN20+GNDPAD" value="SI4464" x="20.955" y="9.525"/>
 <element name="J3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="2X5-PTH-1.27MM" package3d_urn="urn:adsk.eagle:package:38290/1" value="CORTEX_DEBUG_PTH" x="40.386" y="9.906" rot="R270"/>
@@ -4309,8 +4323,8 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="PROD_ID" value="VREG-13321" x="36.068" y="7.366" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="R7" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0402" package3d_urn="urn:adsk.eagle:package:26058/1" value="100k" x="36.322" y="4.318" rot="MR180"/>
-<element name="L7" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" package="0603" package3d_urn="urn:adsk.eagle:package:37574/1" value="68nH" x="24.003" y="1.524">
-<attribute name="PROD_ID" value="NDUC-07874" x="24.003" y="1.524" size="1.778" layer="27" display="off"/>
+<element name="L7" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" package="0603" package3d_urn="urn:adsk.eagle:package:37574/1" value="68nH" x="23.8252" y="14.2494">
+<attribute name="PROD_ID" value="NDUC-07874" x="23.8252" y="14.2494" size="1.778" layer="27" display="off"/>
 </element>
 <element name="J4" library="SparkFun-Retired" library_urn="urn:adsk.eagle:library:533" package="USB-MICROB" value="USB-MICROB" x="15.494" y="2.032" rot="MR0">
 <attribute name="PROD_ID" value="CONN-09505" x="15.494" y="2.032" size="1.778" layer="28" rot="MR0" display="off"/>
@@ -4325,8 +4339,11 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <element name="IC2" library="74xx-little-us" library_urn="urn:adsk.eagle:library:87" package="DRL_R-PDSO-N6" package3d_urn="urn:adsk.eagle:package:2490/1" value="741G3157DRLR" x="36.322" y="7.366" rot="R270"/>
 <element name="JP1" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_NO_SILK" package3d_urn="urn:adsk.eagle:package:39285/1" value="JUMPER-SMT_3_NO_SILK" x="19.558" y="12.9794"/>
 <element name="LED1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="CHIP-LED0603" value="" x="25.908" y="4.826"/>
-<element name="U$5" library="resistor" package="RM20A10K/20K" value="RM20A10K/20K" x="30.48" y="1.778" rot="R180"/>
-<element name="U$6" library="resistor" package="RM20A10K/20K" value="RM20A10K/20K" x="41.402" y="4.826" rot="R180"/>
+<element name="U$5" library="resistor" package="RM20A10K/20K" value="RM20A10K/20K" x="37.0332" y="2.1336" rot="R180"/>
+<element name="U$6" library="resistor" package="RM20A10K/20K" value="RM20A10K/20K" x="41.4274" y="3.9624" rot="R180"/>
+<element name="R12" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0402" package3d_urn="urn:adsk.eagle:package:26058/1" value="10k" x="13.462" y="11.43" rot="MR180"/>
+<element name="R13" library="resistor" library_urn="urn:adsk.eagle:library:348" package="R0402" package3d_urn="urn:adsk.eagle:package:26058/1" value="10k" x="34.036" y="13.462" rot="MR0"/>
+<element name="U$7" library="Ava" package="RADIOMETRIX-HX1" value="RADIOMETRIX-HX1" x="21.6408" y="7.5438"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -4354,16 +4371,16 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <contactref element="L7" pad="1"/>
 <contactref element="L7" pad="2"/>
 <polygon width="0.254" layer="1" isolate="0.254">
-<vertex x="0" y="14.478"/>
-<vertex x="23.368" y="14.478"/>
+<vertex x="0" y="15.113"/>
+<vertex x="23.368" y="15.113"/>
 <vertex x="23.368" y="0"/>
 <vertex x="0" y="0"/>
 </polygon>
 <polygon width="0.254" layer="1">
-<vertex x="24.384" y="14.478"/>
+<vertex x="24.4348" y="15.1384"/>
 <vertex x="24.384" y="0"/>
 <vertex x="43.18" y="0"/>
-<vertex x="43.18" y="14.478"/>
+<vertex x="43.2308" y="15.1384"/>
 </polygon>
 <polygon width="0.254" layer="2">
 <vertex x="-1.27" y="14.478"/>
@@ -4371,10 +4388,9 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <vertex x="23.622" y="0"/>
 <vertex x="-1.27" y="0"/>
 </polygon>
-<via x="26.416" y="1.524" extent="1-16" drill="0.35" diameter="0.55"/>
 <polygon width="0.254" layer="16">
-<vertex x="-0.508" y="14.478"/>
-<vertex x="43.18" y="14.478"/>
+<vertex x="-0.4826" y="15.1384"/>
+<vertex x="43.2054" y="15.1384"/>
 <vertex x="43.18" y="0"/>
 <vertex x="-0.508" y="0"/>
 </polygon>
@@ -4382,20 +4398,18 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <via x="21.59" y="10.16" extent="1-16" drill="0.35" diameter="0.55"/>
 <via x="20.32" y="8.89" extent="1-16" drill="0.35" diameter="0.55"/>
 <via x="21.59" y="8.89" extent="1-16" drill="0.35" diameter="0.55"/>
-<via x="5.969" y="4.953" extent="1-16" drill="0.35"/>
-<via x="6.858" y="8.382" extent="1-16" drill="0.35"/>
+<via x="8.9408" y="5.2832" extent="1-16" drill="0.35"/>
+<via x="8.7884" y="8.763" extent="1-16" drill="0.35"/>
 <via x="13.081" y="6.096" extent="1-16" drill="0.35"/>
 <via x="12.827" y="12.827" extent="1-16" drill="0.35"/>
-<via x="8.001" y="12.954" extent="1-16" drill="0.35"/>
-<via x="21.59" y="1.524" extent="1-16" drill="0.35"/>
-<wire x1="20.955" y1="11.495" x2="20.955" y2="12.919" width="0.2" layer="1"/>
-<wire x1="20.955" y1="12.919" x2="21.752" y2="12.954" width="0.2" layer="1"/>
+<via x="8.89" y="13.4112" extent="1-16" drill="0.35"/>
+<via x="19.4818" y="1.5494" extent="1-16" drill="0.35"/>
 <contactref element="J4" pad="GND"/>
 <contactref element="J4" pad="MT1"/>
 <contactref element="J4" pad="MT2"/>
 <wire x1="23.114" y1="5.496" x2="23.114" y2="5.842" width="0.254" layer="16"/>
 <wire x1="20.955" y1="9.525" x2="21.59" y2="8.89" width="0.254" layer="1"/>
-<via x="38.1" y="2.54" extent="1-16" drill="0.35" diameter="0.55"/>
+<via x="34.8488" y="2.5654" extent="1-16" drill="0.35" diameter="0.55"/>
 <contactref element="IC1" pad="2"/>
 <contactref element="IC2" pad="2"/>
 <contactref element="JP1" pad="2"/>
@@ -4412,17 +4426,23 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="36.024" y1="5.203" x2="35.901" y2="5.08" width="0.15" layer="1"/>
 <wire x1="36.124" y1="7.12466875" x2="36.124" y2="6.09266875" width="0.15" layer="1"/>
 <wire x1="36.124" y1="6.09266875" x2="36.378" y2="5.83866875" width="0.15" layer="1"/>
-<via x="27.94" y="2.54" extent="1-16" drill="0.35" diameter="0.55"/>
 <contactref element="LED1" pad="C"/>
 <contactref element="U$5" pad="P$2"/>
 <contactref element="U$6" pad="P$2"/>
+<wire x1="20.955" y1="11.495" x2="20.955" y2="10.795" width="0.254" layer="1"/>
+<wire x1="20.955" y1="10.795" x2="21.59" y2="10.16" width="0.254" layer="1"/>
+<via x="19.558" y="13.716" extent="1-16" drill="0.35"/>
+<wire x1="20.955" y1="11.495" x2="20.955" y2="12.157" width="0.254" layer="1"/>
+<wire x1="20.955" y1="12.157" x2="21.752" y2="12.954" width="0.254" layer="1"/>
+<via x="30.48" y="1.524" extent="1-16" drill="0.35" diameter="0.55"/>
+<via x="26.924" y="4.953" extent="1-16" drill="0.35" diameter="0.55"/>
 </signal>
 <signal name="RADIO_SDN">
 <contactref element="U$2" pad="1"/>
 <contactref element="R1" pad="2"/>
 <wire x1="18.985" y1="10.525" x2="17.923" y2="10.525" width="0.254" layer="1"/>
 <wire x1="17.923" y1="10.525" x2="17.526" y2="10.922" width="0.254" layer="1"/>
-<wire x1="17.526" y1="10.922" x2="17.526" y2="11.923" width="0.254" layer="1"/>
+<wire x1="17.526" y1="10.922" x2="17.526" y2="11.669" width="0.254" layer="1"/>
 </signal>
 <signal name="RXP">
 <contactref element="L1" pad="2"/>
@@ -4447,8 +4467,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="15.021" y1="9.179" x2="13.97" y2="9.179" width="0.2" layer="1"/>
 <wire x1="13.97" y1="9.179" x2="12.7" y2="9.179" width="0.2" layer="1"/>
 <wire x1="12.7" y1="9.179" x2="12.7" y2="9.31" width="0.2" layer="1"/>
-<wire x1="12.7" y1="9.31" x2="12.368" y2="9.31" width="0.2" layer="1"/>
-<wire x1="12.368" y1="9.31" x2="11.137" y2="10.541" width="0.2" layer="1"/>
+<wire x1="12.7" y1="9.31" x2="11.2014" y2="9.31" width="0.2" layer="1"/>
 </signal>
 <signal name="TX">
 <contactref element="C2" pad="2"/>
@@ -4475,12 +4494,12 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <contactref element="C6" pad="1"/>
 <contactref element="L4" pad="2"/>
 <contactref element="C4" pad="2"/>
-<wire x1="9.437" y1="10.541" x2="8.036" y2="10.541" width="0.2" layer="1"/>
-<wire x1="8.036" y1="10.541" x2="8.001" y2="10.576" width="0.2" layer="1"/>
-<wire x1="8.001" y1="10.576" x2="6.6" y2="10.576" width="0.2" layer="1"/>
-<wire x1="6.6" y1="10.576" x2="6.565" y2="10.541" width="0.2" layer="1"/>
-<wire x1="6.565" y1="10.541" x2="6.565" y2="11.815" width="0.2" layer="1"/>
-<wire x1="6.565" y1="11.815" x2="6.442" y2="11.938" width="0.2" layer="1"/>
+<wire x1="11.2014" y1="11.01" x2="9.6288" y2="11.01" width="0.2" layer="1"/>
+<wire x1="9.6288" y1="11.01" x2="9.6266" y2="11.0078" width="0.2" layer="1"/>
+<wire x1="9.6266" y1="11.0078" x2="8.124" y2="11.0078" width="0.2" layer="1"/>
+<wire x1="8.124" y1="11.0078" x2="8.1144" y2="10.9982" width="0.2" layer="1"/>
+<wire x1="7.7628" y1="12.6238" x2="8.1144" y2="12.2722" width="0.2" layer="1"/>
+<wire x1="8.1144" y1="12.2722" x2="8.1144" y2="10.9982" width="0.2" layer="1"/>
 </signal>
 <signal name="N$3">
 <contactref element="L4" pad="1"/>
@@ -4488,32 +4507,31 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <contactref element="C4" pad="1"/>
 <contactref element="C7" pad="2"/>
 <contactref element="L5" pad="2"/>
-<wire x1="5.242" y1="11.938" x2="5.242" y2="10.918" width="0.2" layer="1"/>
-<wire x1="5.242" y1="10.918" x2="4.865" y2="10.541" width="0.2" layer="1"/>
-<wire x1="4.865" y1="10.541" x2="4.865" y2="9.402" width="0.2" layer="1"/>
-<wire x1="4.865" y1="9.402" x2="4.734" y2="9.271" width="0.2" layer="1"/>
-<wire x1="4.734" y1="9.271" x2="4.734" y2="8.054" width="0.2" layer="1"/>
-<wire x1="4.734" y1="8.054" x2="4.826" y2="7.962" width="0.2" layer="1"/>
-<wire x1="4.826" y1="7.962" x2="4.06" y2="7.962" width="0.2" layer="1"/>
-<wire x1="4.06" y1="7.962" x2="3.556" y2="7.458" width="0.2" layer="1"/>
+<wire x1="6.5628" y1="12.6238" x2="6.5628" y2="11.1466" width="0.2" layer="1"/>
+<wire x1="6.5628" y1="11.1466" x2="6.4144" y2="10.9982" width="0.2" layer="1"/>
+<wire x1="6.4144" y1="10.9982" x2="6.4144" y2="9.7322" width="0.2" layer="1"/>
+<wire x1="6.4144" y1="9.7322" x2="6.4104" y2="9.7282" width="0.2" layer="1"/>
+<wire x1="6.4104" y1="9.7282" x2="6.4104" y2="8.4034" width="0.2" layer="1"/>
+<wire x1="6.4104" y1="8.4034" x2="6.4008" y2="8.3938" width="0.2" layer="1"/>
+<wire x1="6.4008" y1="8.3938" x2="6.1762" y2="8.1692" width="0.2" layer="1"/>
+<wire x1="6.1762" y1="8.1692" x2="5.0038" y2="8.1692" width="0.2" layer="1"/>
 </signal>
 <signal name="N$5">
 <contactref element="L5" pad="1"/>
 <contactref element="C8" pad="1"/>
 <contactref element="C9" pad="2"/>
 <contactref element="C7" pad="1"/>
-<wire x1="4.826" y1="6.262" x2="3.56" y2="6.262" width="0.2" layer="1"/>
-<wire x1="3.56" y1="6.262" x2="3.556" y2="6.258" width="0.2" layer="1"/>
-<wire x1="3.556" y1="6.258" x2="3.556" y2="4.988" width="0.2" layer="1"/>
-<wire x1="3.556" y1="4.988" x2="3.591" y2="4.953" width="0.2" layer="1"/>
-<wire x1="3.591" y1="4.953" x2="3.591" y2="3.937" width="0.2" layer="1"/>
-<wire x1="3.591" y1="3.937" x2="3.464" y2="3.81" width="0.2" layer="1"/>
+<wire x1="5.0038" y1="6.9692" x2="5.2792" y2="6.6938" width="0.2" layer="1"/>
+<wire x1="5.2792" y1="6.6938" x2="6.4008" y2="6.6938" width="0.2" layer="1"/>
+<wire x1="6.4008" y1="6.6938" x2="6.4104" y2="6.6842" width="0.2" layer="1"/>
+<wire x1="6.4104" y1="6.6842" x2="6.4104" y2="5.2832" width="0.2" layer="1"/>
+<wire x1="6.4104" y1="5.2832" x2="6.4104" y2="4.1656" width="0.2" layer="1"/>
 </signal>
 <signal name="RADIO_ANT">
 <contactref element="C9" pad="1"/>
 <contactref element="J2" pad="2"/>
-<wire x1="4.664" y1="3.81" x2="4.664" y2="1.602" width="0.2" layer="1"/>
-<wire x1="4.664" y1="1.602" x2="4.572" y2="1.51" width="0.2" layer="1"/>
+<wire x1="7.6104" y1="4.1656" x2="7.62" y2="4.156" width="0.2" layer="1"/>
+<wire x1="7.62" y1="4.156" x2="7.62" y2="1.51" width="0.2" layer="1"/>
 </signal>
 <signal name="XIN">
 <contactref element="C12" pad="1"/>
@@ -4541,6 +4559,13 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <contactref element="JP1" pad="3"/>
 <wire x1="20.3708" y1="12.9794" x2="20.3708" y2="12.6492" width="0.254" layer="1"/>
 <wire x1="20.3708" y1="12.6492" x2="20.455" y2="12.565" width="0.254" layer="1"/>
+<contactref element="R13" pad="2"/>
+<wire x1="33.386" y1="13.462" x2="32.8526" y2="13.9954" width="0.3048" layer="16"/>
+<wire x1="21.1836" y1="13.9954" x2="21.082" y2="13.8938" width="0.3048" layer="16"/>
+<via x="21.082" y="13.8938" extent="1-16" drill="0.35"/>
+<wire x1="21.082" y1="13.8938" x2="20.3708" y2="13.1826" width="0.3048" layer="1"/>
+<wire x1="20.3708" y1="13.1826" x2="20.3708" y2="12.9794" width="0.3048" layer="1"/>
+<wire x1="32.8526" y1="13.9954" x2="21.1836" y2="13.9954" width="0.3048" layer="16"/>
 </signal>
 <signal name="GPIO3">
 <contactref element="U$2" pad="20"/>
@@ -4550,6 +4575,16 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="19.812" y1="11.938" x2="19.05" y2="11.938" width="0.254" layer="1"/>
 <wire x1="18.7452" y1="12.2428" x2="18.7452" y2="12.9794" width="0.254" layer="1"/>
 <wire x1="19.05" y1="11.938" x2="18.7452" y2="12.2428" width="0.254" layer="1"/>
+<contactref element="R12" pad="2"/>
+<wire x1="18.7452" y1="12.9794" x2="18.23" y2="13.4946" width="0.254" layer="1"/>
+<wire x1="18.23" y1="13.4946" x2="18.23" y2="13.6782125" width="0.254" layer="1"/>
+<wire x1="18.23" y1="13.6782125" x2="18.0812125" y2="13.827" width="0.254" layer="1"/>
+<wire x1="18.0812125" y1="13.827" x2="16.9707875" y2="13.827" width="0.254" layer="1"/>
+<wire x1="16.9707875" y1="13.827" x2="16.8597875" y2="13.716" width="0.254" layer="1"/>
+<wire x1="16.8597875" y1="13.716" x2="15.24" y2="13.716" width="0.254" layer="1"/>
+<via x="15.24" y="13.716" extent="1-16" drill="0.35"/>
+<wire x1="15.24" y1="13.716" x2="15.24" y2="12.558" width="0.254" layer="16"/>
+<wire x1="15.24" y1="12.558" x2="14.112" y2="11.43" width="0.254" layer="16"/>
 </signal>
 <signal name="VCC">
 <contactref element="L6" pad="1"/>
@@ -4607,6 +4642,15 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <via x="39.4434" y="5.588" extent="1-16" drill="0.35"/>
 <wire x1="39.4434" y1="5.588" x2="39.878" y2="5.1534" width="0.254" layer="15"/>
 <wire x1="39.878" y1="5.1534" x2="39.878" y2="5.08" width="0.254" layer="15"/>
+<contactref element="R12" pad="1"/>
+<contactref element="R13" pad="1"/>
+<via x="10.414" y="13.462" extent="1-16" drill="0.35"/>
+<wire x1="10.414" y1="13.462" x2="12.446" y2="11.43" width="0.254" layer="16"/>
+<wire x1="12.446" y1="11.43" x2="12.7" y2="11.43" width="0.254" layer="16"/>
+<wire x1="12.7" y1="11.43" x2="12.812" y2="11.43" width="0.254" layer="16"/>
+<wire x1="12.812" y1="11.318" x2="12.7" y2="11.43" width="0.254" layer="16"/>
+<wire x1="34.686" y1="13.462" x2="38.735" y2="13.462" width="0.254" layer="16"/>
+<wire x1="38.735" y1="13.462" x2="39.751" y2="12.446" width="0.254" layer="16"/>
 </signal>
 <signal name="XOUT">
 <contactref element="C13" pad="1"/>
@@ -4671,14 +4715,14 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <signal name="AUDIO">
 <contactref element="R5" pad="2"/>
 <contactref element="U$3" pad="1"/>
-<wire x1="23.368" y1="3.16" x2="31.1" y2="3.16" width="0.254" layer="1"/>
-<wire x1="31.1" y1="3.16" x2="32.258" y2="4.318" width="0.254" layer="1"/>
-<wire x1="32.258" y1="4.318" x2="33.782" y2="4.318" width="0.254" layer="1"/>
 <contactref element="IC1" pad="3"/>
-<wire x1="33.782" y1="4.318" x2="33.8455" y2="4.318" width="0.254" layer="1"/>
 <wire x1="35.901" y1="4.58" x2="35.314" y2="4.58" width="0.254" layer="1"/>
 <wire x1="35.314" y1="4.58" x2="35.052" y2="4.318" width="0.254" layer="1"/>
 <wire x1="35.052" y1="4.318" x2="33.8455" y2="4.318" width="0.254" layer="1"/>
+<wire x1="23.368" y1="3.16" x2="24.52986875" y2="3.16" width="0.3048" layer="1"/>
+<wire x1="24.52986875" y1="3.16" x2="24.63386875" y2="3.264" width="0.3048" layer="1"/>
+<wire x1="32.7915" y1="3.264" x2="33.8455" y2="4.318" width="0.3048" layer="1"/>
+<wire x1="24.63386875" y1="3.264" x2="32.7915" y2="3.264" width="0.3048" layer="1"/>
 </signal>
 <signal name="ENABLE">
 <contactref element="U$1" pad="EN"/>
@@ -4711,10 +4755,9 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="19.304" y1="4.41" x2="20.666" y2="3.048" width="0.254" layer="1"/>
 <wire x1="21.859" y1="3.048" x2="21.971" y2="3.16" width="0.254" layer="1"/>
 <wire x1="20.666" y1="3.048" x2="21.859" y2="3.048" width="0.254" layer="1"/>
-<wire x1="22.675" y1="4.021" x2="22.675" y2="3.7507875" width="0.254" layer="1"/>
 <wire x1="21.971" y1="3.3007875" x2="21.971" y2="3.16" width="0.254" layer="1"/>
-<wire x1="22.675" y1="3.7507875" x2="21.971" y2="3.3007875" width="0.254" layer="1"/>
-<wire x1="23.368" y1="4.46" x2="22.675" y2="4.021" width="0.254" layer="1"/>
+<wire x1="21.971" y1="3.16" x2="23.271" y2="4.46" width="0.3048" layer="1"/>
+<wire x1="23.271" y1="4.46" x2="23.368" y2="4.46" width="0.3048" layer="1"/>
 </signal>
 <signal name="NC">
 <contactref element="U$2" pad="5"/>
@@ -4848,28 +4891,25 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <contactref element="J1" pad="2"/>
 <contactref element="U$4" pad="1"/>
 <contactref element="R7" pad="1"/>
-<wire x1="35.672" y1="4.318" x2="35.672" y2="2.906" width="0.254" layer="16"/>
-<wire x1="35.672" y1="2.906" x2="35.56" y2="2.794" width="0.254" layer="16"/>
-<wire x1="35.56" y1="2.794" x2="35.56" y2="2.526" width="0.254" layer="16"/>
-<via x="35.56" y="2.526" extent="1-16" drill="0.35" diameter="0.55"/>
-<wire x1="35.56" y1="2.526" x2="35.56" y2="2.032" width="0.254" layer="1"/>
-<wire x1="35.56" y1="2.032" x2="35.306" y2="2.286" width="0.254" layer="1"/>
 <wire x1="37.3681" y1="8.316" x2="36.9725" y2="7.9204" width="0.254" layer="16"/>
 <wire x1="36.9725" y1="7.9204" x2="36.65236875" y2="7.9204" width="0.254" layer="16"/>
 <wire x1="36.65236875" y1="7.9204" x2="35.672" y2="6.94003125" width="0.254" layer="16"/>
 <wire x1="35.672" y1="6.94003125" x2="35.672" y2="4.318" width="0.254" layer="16"/>
 <contactref element="J4" pad="VBUS"/>
-<wire x1="19.356" y1="3.25" x2="26.214" y2="3.25" width="0.254" layer="16"/>
-<wire x1="28.0134" y1="1.4506" x2="34.4846" y2="1.4506" width="0.254" layer="16"/>
-<wire x1="34.4846" y1="1.4506" x2="35.56" y2="2.526" width="0.254" layer="16"/>
-<wire x1="26.214" y1="3.25" x2="28.0134" y2="1.4506" width="0.254" layer="16"/>
-<wire x1="35.56" y1="1.51" x2="35.56" y2="2.526" width="0.254" layer="1"/>
-<wire x1="16.794" y1="4.682" x2="16.794" y2="5.364" width="0.254" layer="16"/>
-<wire x1="16.794" y1="5.364" x2="17.272" y2="5.842" width="0.254" layer="16"/>
-<wire x1="17.272" y1="5.842" x2="18.034" y2="5.842" width="0.254" layer="16"/>
-<wire x1="18.034" y1="5.842" x2="18.796" y2="5.08" width="0.254" layer="16"/>
-<wire x1="18.796" y1="5.08" x2="18.796" y2="3.81" width="0.254" layer="16"/>
-<wire x1="18.796" y1="3.81" x2="19.356" y2="3.25" width="0.254" layer="16"/>
+<wire x1="16.794" y1="4.682" x2="18.2146" y2="3.2614" width="0.3048" layer="16"/>
+<wire x1="22.34873125" y1="1.4224" x2="27.94" y2="1.4224" width="0.3048" layer="16"/>
+<wire x1="18.2146" y1="3.2614" x2="20.50973125" y2="3.2614" width="0.3048" layer="16"/>
+<wire x1="20.50973125" y1="3.2614" x2="22.34873125" y2="1.4224" width="0.3048" layer="16"/>
+<wire x1="27.94" y1="1.4224" x2="27.94" y2="1.4592" width="0.3048" layer="16"/>
+<wire x1="27.94" y1="1.4592" x2="27.9146" y2="1.4846" width="0.3048" layer="16"/>
+<via x="27.9146" y="1.4846" extent="1-16" drill="0.35"/>
+<wire x1="27.9146" y1="1.4846" x2="28.5864" y2="1.4846" width="0.3048" layer="16"/>
+<wire x1="33.86455" y1="3.5306" x2="34.9758" y2="3.5306" width="0.3048" layer="16"/>
+<wire x1="29.9454" y1="2.8436" x2="33.17755" y2="2.8436" width="0.3048" layer="16"/>
+<wire x1="33.17755" y1="2.8436" x2="33.86455" y2="3.5306" width="0.3048" layer="16"/>
+<wire x1="28.5864" y1="1.4846" x2="29.9454" y2="2.8436" width="0.3048" layer="16"/>
+<wire x1="34.9758" y1="3.5306" x2="35.672" y2="4.2268" width="0.3048" layer="16"/>
+<wire x1="35.672" y1="4.2268" x2="35.672" y2="4.318" width="0.3048" layer="16"/>
 </signal>
 <signal name="EN">
 <contactref element="U$4" pad="3"/>
@@ -4916,8 +4956,8 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <contactref element="IC1" pad="4"/>
 <contactref element="U$6" pad="P$3"/>
 <wire x1="37.251" y1="4.58" x2="40.14" y2="4.58" width="0.254" layer="1"/>
-<wire x1="41.021" y1="5.461" x2="41.402" y2="5.461" width="0.254" layer="1"/>
-<wire x1="40.14" y1="4.58" x2="41.021" y2="5.461" width="0.254" layer="1"/>
+<wire x1="40.6654" y1="4.5974" x2="41.4274" y2="4.5974" width="0.254" layer="1"/>
+<wire x1="40.14" y1="4.58" x2="40.6654" y2="4.5974" width="0.254" layer="1"/>
 </signal>
 <signal name="PA08">
 <contactref element="U$3" pad="2"/>
@@ -4956,47 +4996,46 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 </signal>
 <signal name="ENABLE_IO">
 <contactref element="IC2" pad="4"/>
-<wire x1="37.6312125" y1="6.009" x2="37.425" y2="6.009" width="0.254" layer="1"/>
-<wire x1="37.9102125" y1="5.73" x2="37.6312125" y2="6.009" width="0.254" layer="1"/>
-<wire x1="36.997" y1="6.437" x2="36.997" y2="6.866" width="0.254" layer="1"/>
-<wire x1="37.425" y1="6.009" x2="36.997" y2="6.437" width="0.254" layer="1"/>
 <contactref element="U$5" pad="P$3"/>
-<wire x1="30.48" y1="2.413" x2="30.6578" y2="2.3368" width="0.254" layer="1"/>
-<wire x1="30.6578" y1="2.3368" x2="30.6578" y2="2.6198125" width="0.254" layer="1"/>
-<wire x1="32.03481875" y1="3.556" x2="39.116" y2="3.556" width="0.254" layer="1"/>
-<wire x1="31.25781875" y1="2.779" x2="32.03481875" y2="3.556" width="0.254" layer="1"/>
-<wire x1="30.6578" y1="2.6198125" x2="30.8169875" y2="2.779" width="0.254" layer="1"/>
-<wire x1="30.8169875" y1="2.779" x2="31.25781875" y2="2.779" width="0.254" layer="1"/>
-<via x="39.116" y="3.556" extent="1-16" drill="0.35"/>
 <wire x1="39.116" y1="3.556" x2="39.116" y2="4.572" width="0.254" layer="15"/>
 <wire x1="39.116" y1="4.572" x2="38.1" y2="5.588" width="0.254" layer="15"/>
+<wire x1="37.0332" y1="2.7686" x2="37.719" y2="3.4544" width="0.3048" layer="1"/>
+<wire x1="37.719" y1="3.4544" x2="38.6334" y2="3.4544" width="0.3048" layer="1"/>
+<wire x1="38.6334" y1="3.4544" x2="38.735" y2="3.556" width="0.3048" layer="1"/>
+<wire x1="38.735" y1="3.556" x2="39.116" y2="3.556" width="0.3048" layer="1"/>
+<via x="39.116" y="3.556" extent="1-16" drill="0.35"/>
+<wire x1="36.997" y1="6.866" x2="38.1" y2="5.763" width="0.3048" layer="1"/>
 <via x="38.1" y="5.588" extent="1-16" drill="0.35"/>
-<wire x1="38.1" y1="5.588" x2="37.958" y2="5.73" width="0.254" layer="1"/>
-<wire x1="37.958" y1="5.73" x2="37.9102125" y2="5.73" width="0.254" layer="1"/>
+<wire x1="38.1" y1="5.763" x2="38.1" y2="5.588" width="0.3048" layer="1"/>
 </signal>
 <signal name="ENABLE_IN">
 <contactref element="J1" pad="1"/>
-<wire x1="33.02" y1="1.51" x2="33.02" y2="2.54" width="0.15" layer="1"/>
-<via x="33.02" y="2.54" extent="1-16" drill="0.35"/>
-<wire x1="33.02" y1="2.54" x2="33.274" y2="2.286" width="0.254" layer="15"/>
-<wire x1="33.274" y1="2.286" x2="33.274" y2="1.016" width="0.254" layer="15"/>
-<wire x1="33.274" y1="1.016" x2="33.909" y2="0.381" width="0.254" layer="15"/>
-<wire x1="33.909" y1="0.381" x2="41.148" y2="0.381" width="0.254" layer="15"/>
-<wire x1="41.148" y1="0.381" x2="41.91" y2="1.143" width="0.254" layer="15"/>
-<wire x1="41.91" y1="1.143" x2="41.91" y2="4.064" width="0.254" layer="15"/>
 <contactref element="U$5" pad="P$1"/>
-<wire x1="32.6136" y1="2.1336" x2="33.02" y2="2.54" width="0.254" layer="1"/>
-<wire x1="31.0896" y1="0.9652" x2="31.0896" y2="0.5334" width="0.254" layer="1"/>
-<wire x1="31.0896" y1="0.5334" x2="31.242" y2="0.381" width="0.254" layer="1"/>
-<wire x1="31.242" y1="0.381" x2="32.893" y2="0.381" width="0.254" layer="1"/>
-<wire x1="32.893" y1="0.381" x2="33.02" y2="0.508" width="0.254" layer="1"/>
-<wire x1="33.02" y1="0.508" x2="33.02" y2="2.54" width="0.254" layer="1"/>
+<via x="37.6428" y="1.3208" extent="1-16" drill="0.35"/>
+<wire x1="25.3746" y1="1.4846" x2="25.5524" y2="1.3068" width="0.2" layer="1"/>
+<wire x1="25.5524" y1="1.3068" x2="25.5524" y2="0.635" width="0.2" layer="1"/>
+<wire x1="25.5524" y1="0.635" x2="25.4254" y2="0.635" width="0.3048" layer="1"/>
+<wire x1="25.4254" y1="0.635" x2="25.4" y2="0.6604" width="0.3048" layer="1"/>
+<via x="25.4" y="0.6604" extent="1-16" drill="0.35"/>
+<wire x1="25.4" y1="0.6604" x2="36.9824" y2="0.6604" width="0.3048" layer="16"/>
+<wire x1="36.9824" y1="0.6604" x2="37.6428" y2="1.3208" width="0.3048" layer="16"/>
 </signal>
 <signal name="AUDIO_IN">
 <contactref element="J1" pad="4"/>
 <contactref element="U$6" pad="P$1"/>
-<wire x1="40.64" y1="1.51" x2="42.0116" y2="2.8816" width="0.254" layer="1"/>
-<wire x1="42.0116" y1="2.8816" x2="42.0116" y2="4.0132" width="0.254" layer="1"/>
+<wire x1="32.9946" y1="1.4846" x2="32.9946" y2="2.0574" width="0.3048" layer="1"/>
+<wire x1="32.9946" y1="2.0574" x2="33.02" y2="2.0828" width="0.3048" layer="1"/>
+<wire x1="33.02" y1="2.0828" x2="33.02" y2="1.812" width="0.3048" layer="1"/>
+<wire x1="33.02" y1="1.812" x2="32.6926" y2="1.4846" width="0.3048" layer="1"/>
+<via x="32.6926" y="1.4846" extent="1-16" drill="0.35"/>
+<wire x1="32.6926" y1="1.4846" x2="36.94845" y2="1.4846" width="0.3048" layer="16"/>
+<wire x1="36.94845" y1="1.4846" x2="37.39145" y2="1.9276" width="0.3048" layer="16"/>
+<wire x1="37.39145" y1="1.9276" x2="41.7548" y2="1.9276" width="0.3048" layer="16"/>
+<wire x1="42.0878" y1="2.2606" x2="42.0596" y2="2.3114" width="0.3048" layer="16"/>
+<via x="42.0596" y="2.3114" extent="1-16" drill="0.35"/>
+<wire x1="42.0596" y1="2.3114" x2="42.0596" y2="2.6444" width="0.3048" layer="1"/>
+<wire x1="42.0596" y1="2.6444" x2="42.037" y2="3.1496" width="0.3048" layer="1"/>
+<wire x1="41.7548" y1="1.9276" x2="42.0878" y2="2.2606" width="0.3048" layer="16"/>
 </signal>
 <signal name="ENABLE_I2C">
 <contactref element="U$3" pad="4"/>
@@ -5016,15 +5055,6 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <wire x1="32.4866" y1="6.4479875" x2="32.4866" y2="8.5380125" width="0.254" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="4,1,b0fe7c23bfd12cf5"/>
-<approved hash="4,1,599145110bd36e99"/>
-<approved hash="4,1,3e8752321fd1288f"/>
-<approved hash="4,1,343bf82387d3dc30"/>
-<approved hash="4,1,e12e5d237bd36e25"/>
-<approved hash="4,1,1b8b17238bd36e80"/>
-<approved hash="4,1,c610ca120fd3681b"/>
-</errors>
 </board>
 </drawing>
 <compatibility>

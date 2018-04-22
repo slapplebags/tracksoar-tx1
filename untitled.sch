@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.0">
+<eagle version="8.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -11518,6 +11518,20 @@ PTH and SMD connector options available.&lt;/p&gt;
 <rectangle x1="0.3175" y1="-0.9525" x2="0.9525" y2="-0.3175" layer="31"/>
 <rectangle x1="-0.9525" y1="-0.9525" x2="-0.3175" y2="-0.3175" layer="31"/>
 </package>
+<package name="RADIOMETRIX-HX1">
+<wire x1="-21.59" y1="-7.62" x2="21.59" y2="-7.62" width="0.127" layer="21"/>
+<wire x1="-21.59" y1="-7.62" x2="-21.59" y2="7.62" width="0.127" layer="21"/>
+<wire x1="21.59" y1="7.62" x2="-21.59" y2="7.62" width="0.127" layer="21"/>
+<wire x1="21.59" y1="7.62" x2="21.59" y2="-7.62" width="0.127" layer="21"/>
+<pad name="RFOUT" x="-13.97" y="-10.16" drill="0.7" diameter="2.1844"/>
+<pad name="RFGND" x="-11.43" y="-10.16" drill="0.7" diameter="2.1844"/>
+<pad name="TXD" x="11.43" y="-10.16" drill="0.7" diameter="2.1844"/>
+<pad name="EN" x="3.81" y="-10.16" drill="0.7" diameter="2.1844"/>
+<pad name="VCC" x="6.35" y="-10.16" drill="0.7" diameter="2.1844"/>
+<pad name="0V" x="8.89" y="-10.16" drill="0.7" diameter="2.1844"/>
+<pad name="RFGND2" x="-16.51" y="-10.16" drill="0.7" diameter="2.1844"/>
+<rectangle x1="7.62" y1="-2.54" x2="19.05" y2="5.08" layer="39"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SI4464">
@@ -11570,6 +11584,19 @@ PTH and SMD connector options available.&lt;/p&gt;
 <pin name="GND" x="-20.32" y="7.62" length="middle"/>
 <text x="-4.1275" y="-0.9525" size="1.778" layer="94">SI4464</text>
 </symbol>
+<symbol name="NTX2">
+<wire x1="-43.18" y1="25.4" x2="20.32" y2="25.4" width="0.254" layer="94"/>
+<wire x1="20.32" y1="25.4" x2="20.32" y2="2.54" width="0.254" layer="94"/>
+<wire x1="20.32" y1="2.54" x2="-43.18" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-43.18" y1="2.54" x2="-43.18" y2="25.4" width="0.254" layer="94"/>
+<pin name="RFGND" x="-40.64" y="-2.54" length="middle" rot="R90"/>
+<pin name="RFOUT" x="-35.56" y="-2.54" length="middle" rot="R90"/>
+<pin name="EN" x="-2.54" y="-2.54" length="middle" rot="R90"/>
+<pin name="VCC" x="2.54" y="-2.54" length="middle" rot="R90"/>
+<pin name="0V" x="7.62" y="-2.54" length="middle" rot="R90"/>
+<pin name="TXD" x="12.7" y="-2.54" length="middle" rot="R90"/>
+<pin name="RFGND2" x="-30.48" y="-2.54" length="middle" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="SI4464">
@@ -11600,6 +11627,27 @@ PTH and SMD connector options available.&lt;/p&gt;
 <connect gate="G$1" pin="VDD2" pad="8"/>
 <connect gate="G$1" pin="XIN" pad="17"/>
 <connect gate="G$1" pin="XOUT" pad="16"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RADIOMETRIX-HX1">
+<gates>
+<gate name="G$1" symbol="NTX2" x="12.7" y="17.78"/>
+</gates>
+<devices>
+<device name="" package="RADIOMETRIX-HX1">
+<connects>
+<connect gate="G$1" pin="0V" pad="0V"/>
+<connect gate="G$1" pin="EN" pad="EN"/>
+<connect gate="G$1" pin="RFGND" pad="RFGND"/>
+<connect gate="G$1" pin="RFGND2" pad="RFGND2"/>
+<connect gate="G$1" pin="RFOUT" pad="RFOUT"/>
+<connect gate="G$1" pin="TXD" pad="TXD"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -14894,6 +14942,9 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <part name="LED1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="CHIP-LED0603"/>
 <part name="U$5" library="resistor" deviceset="RM20A10K/20K" device=""/>
 <part name="U$6" library="resistor" deviceset="RM20A10K/20K" device=""/>
+<part name="R12" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:26058/1" value="10k"/>
+<part name="R13" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:26058/1" value="10k"/>
+<part name="U$7" library="Ava" deviceset="RADIOMETRIX-HX1" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14964,6 +15015,9 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <instance part="LED1" gate="G$1" x="-104.14" y="109.22" rot="R90"/>
 <instance part="U$5" gate="G$1" x="-231.14" y="81.28"/>
 <instance part="U$6" gate="G$1" x="-231.14" y="104.14"/>
+<instance part="R12" gate="G$1" x="-73.66" y="266.7" rot="R270"/>
+<instance part="R13" gate="G$1" x="-63.5" y="266.7" rot="R270"/>
+<instance part="U$7" gate="G$1" x="53.34" y="106.68"/>
 </instances>
 <busses>
 </busses>
@@ -15303,6 +15357,7 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <wire x1="-63.5" y1="261.62" x2="-60.96" y2="261.62" width="0.1524" layer="91"/>
 <junction x="-63.5" y="261.62"/>
 <label x="-58.42" y="261.62" size="1.778" layer="95"/>
+<pinref part="R13" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="GPIO3" class="0">
@@ -15317,6 +15372,7 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <wire x1="-73.66" y1="261.62" x2="-76.2" y2="261.62" width="0.1524" layer="91"/>
 <junction x="-73.66" y="261.62"/>
 <label x="-86.36" y="261.62" size="1.778" layer="95"/>
+<pinref part="R12" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -15373,6 +15429,16 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <wire x1="-55.88" y1="99.06" x2="-55.88" y2="101.6" width="0.1524" layer="91"/>
 <junction x="-55.88" y="99.06"/>
 <label x="-55.88" y="104.14" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="-73.66" y1="271.78" x2="-73.66" y2="274.32" width="0.1524" layer="91"/>
+<junction x="-73.66" y="271.78"/>
+</segment>
+<segment>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="-63.5" y1="271.78" x2="-63.5" y2="274.32" width="0.1524" layer="91"/>
+<junction x="-63.5" y="271.78"/>
 </segment>
 </net>
 <net name="XOUT" class="0">
